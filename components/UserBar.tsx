@@ -2,6 +2,7 @@
 import React from 'react';
 import {ImageBackground, Text, StyleSheet, View, Image} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import Icon from 'react-native-vector-icons/SimpleLineIcons';
 
 // imports
 import {uri} from '../modules/constants';
@@ -19,7 +20,7 @@ export const UserBar = (props: Props) => {
       />
       <Text style={styles.userName}>username</Text>
       <View style={{flexGrow: 1}} />
-      <Text style={styles.menu}>...</Text>
+      <Icon name="options-vertical" style={styles.menu} size={15} color="#333"/>
     </View>
   );
 };
@@ -46,10 +47,8 @@ const styles = StyleSheet.create({
     paddingBottom: 5,
   },
   menu: {
-    fontWeight: 'bold',
-    fontSize: 20,
+    paddingTop: 10,
     paddingBottom: 10,
     paddingRight: 15,
-    alignSelf: 'center',
   },
 });
