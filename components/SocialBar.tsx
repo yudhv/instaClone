@@ -5,6 +5,7 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import {Icon} from 'react-native-elements';
 import SimpleLineIcon from 'react-native-vector-icons/SimpleLineIcons';
+import AntDesignIcon from 'react-native-vector-icons/AntDesign';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome5';
 
@@ -17,11 +18,10 @@ type Props = {
 const SocialButtonBar = (props: Props) => {
   return (
     <View style={styles.buttonBar}>
-      <SimpleLineIcon
+      <AntDesignIcon
         style={{...styles.icon, color: props.isLike ? 'red' : 'black'}}
         name="heart"
         size={25}
-        color="red"
       />
       <SimpleLineIcon style={styles.icon} name="bubble" size={25} />
       <FeatherIcon style={styles.icon} name="send" size={25} />
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   icon: {
     marginRight: 10,
     marginLeft: 10,
-    marginTop: 5,
-    marginBottom: 5,
+    marginTop: 10,
+    marginBottom: 15,
   },
 });

@@ -9,6 +9,7 @@ import {uri} from '../modules/constants';
 
 type Props = {
   imageId: number;
+  name: string;
 };
 
 export const UserBar = (props: Props) => {
@@ -18,7 +19,7 @@ export const UserBar = (props: Props) => {
         style={styles.profileImage}
         source={{uri: uri + '/id/' + props.imageId + '/60'}}
       />
-      <Text style={styles.userName}>username</Text>
+      <Text style={styles.userName}>{props.name}</Text>
       <View style={{flexGrow: 1}} />
       <Icon name="options-vertical" style={styles.menu} size={15} color="#333"/>
     </View>
